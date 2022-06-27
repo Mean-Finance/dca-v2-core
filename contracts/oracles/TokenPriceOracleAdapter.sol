@@ -17,7 +17,7 @@ contract TokenPriceOracleAdapter is ITokenPriceOracleAdapter {
 
   /// @inheritdoc IPriceOracle
   function canSupportPair(address _tokenA, address _tokenB) external view returns (bool) {
-    return ITokenPriceOracle(tokenPriceOracle).canSupportPair(_tokenA, _tokenB);
+    return tokenPriceOracle.canSupportPair(_tokenA, _tokenB);
   }
 
   /// @inheritdoc IPriceOracle
@@ -26,16 +26,16 @@ contract TokenPriceOracleAdapter is ITokenPriceOracleAdapter {
     uint128 _amountIn,
     address _tokenOut
   ) external view returns (uint256 _amountOut) {
-    return ITokenPriceOracle(tokenPriceOracle).quote(_tokenIn, _amountIn, _tokenOut);
+    return tokenPriceOracle.quote(_tokenIn, _amountIn, _tokenOut);
   }
 
   /// @inheritdoc IPriceOracle
   function reconfigureSupportForPair(address _tokenA, address _tokenB) external {
-    ITokenPriceOracle(tokenPriceOracle).addOrModifySupportForPair(_tokenA, _tokenB);
+    tokenPriceOracle.addOrModifySupportForPair(_tokenA, _tokenB);
   }
 
   /// @inheritdoc IPriceOracle
   function addSupportForPairIfNeeded(address _tokenA, address _tokenB) external {
-    ITokenPriceOracle(tokenPriceOracle).addSupportForPairIfNeeded(_tokenA, _tokenB);
+    tokenPriceOracle.addSupportForPairIfNeeded(_tokenA, _tokenB);
   }
 }

@@ -234,10 +234,10 @@
   dependencies:
     "@cspotcode/source-map-consumer" "0.8.0"
 
-"@defi-wonderland/smock@2.0.7":
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/@defi-wonderland/smock/-/smock-2.0.7.tgz#59d5fc93e175ad120c5dcdd8294e07525606c855"
-  integrity sha512-RVpODLKZ/Cr0C1bCbhJ2aXbAr2Ll/K2WO7hDL96tqhMzCsA7ToWdDIgiNpV5Vtqqvpftu5ddO7v3TAurQNSU0w==
+"@defi-wonderland/smock@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@defi-wonderland/smock/-/smock-2.1.0.tgz#4d8a0aa56d15b4a8e30bcbc6e1305fad0c2b8927"
+  integrity sha512-lyRgZHVv6kC6X7U/+h+EKcM1lQtwv09BCBB/ekwen0EF7DegirlHJM16SSyZcB549ZyzMJ2Eh5ayAikUejcx1g==
   dependencies:
     "@nomiclabs/ethereumjs-vm" "^4.2.2"
     diff "^5.0.0"
