@@ -104,3 +104,4 @@ jobs:
         env:
           TS_NODE_SKIP_IGNORE: true
           ETH_NODE_URI_MAINNET: https://eth-mainnet.alchemyapi.io/v2/${{ secrets.ALCHEMY_API_KEY }}
+          ETH_NODE_URI_OPTIMISM: https://opt-mainnet.g.alchemy.com/v2/${{ secrets.ALCHEMY_API_KEY }}

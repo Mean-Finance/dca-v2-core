@@ -1,12 +1,12 @@
 import axios from 'axios';
 import { BigNumber, utils } from 'ethers';
 
-export const getLastPrice = async (coin: string): Promise<number> => {
-  return await getPrice(coin);
+export const getLastPrice = async (network: string, coin: string): Promise<number> => {
+  return await getPrice(network, coin);
 };
 
-export const getPrice = async (coin: string, timestamp?: number): Promise<number> => {
-  const coinId = 'ethereum:' + coin.toLowerCase();
+export const getPrice = async (network: string, coin: string, timestamp?: number): Promise<number> => {
+  const coinId = `${network}:${coin.toLowerCase()}`;
   const response = await axios.post('https://coins.llama.fi/prices', { coins: [coinId], timestamp });
 
   const { coins } = response.data;

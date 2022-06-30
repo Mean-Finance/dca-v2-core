@@ -151,7 +151,7 @@ async function getPriceBetweenTokens(tokenA: Token, tokenB: Token) {
 let priceCache: Map<string, number> = new Map();
 async function fetchPrice(address: string): Promise<number> {
   if (!priceCache.has(address)) {
-    const price = await getPrice(address, 1652664896);
+    const price = await getPrice('ethereum', address, 1652664896);
     priceCache.set(address, price);
   }
   return priceCache.get(address)!;

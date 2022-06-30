@@ -49,7 +49,7 @@ contract('UniswapV3Oracle', () => {
     let feedPrice: number;
     given(async () => {
       // Funny thing, coingecko updates this price feed every 5 minute (not a twap, but close enough).
-      feedPrice = await getLastPrice(WETH);
+      feedPrice = await getLastPrice('ethereum', WETH);
     });
     then('all USDC/WETH pools are used', async () => {
       expect(await oracle.poolsUsedForPair(WETH, USDC)).to.eql([UNI_WETH_USDC_POOL_LOW, UNI_WETH_USDC_POOL_MEDIUM, UNI_WETH_USDC_POOL_HIGH]);
